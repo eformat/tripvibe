@@ -7,7 +7,7 @@ metadata:
   labels:
     {{- include "tripvibe.labels" . | nindent 4 }}
 spec:
-  replicas: {{ .Values.replicas }}
+  replicas: {{ .Values.replicas.min }}
   revisionHistoryLimit: 10
   selector:
     {{- include "tripvibe.selectorLabels" . | nindent 4 }}
